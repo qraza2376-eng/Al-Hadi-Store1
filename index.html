@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f1117;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+}
+
+.back{
+    font-size:28px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+h1{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.alert{
+    background:#c51b1b;
+    border:1px solid #ff4d4d;
+    color:#fff;
+    padding:18px;
+    border-radius:16px;
+    margin-bottom:28px;
+    font-weight:600;
+}
+
+.welcome{
+    font-size:18px;
+    margin-bottom:24px;
+    line-height:1.5;
+}
+
+label{
+    display:block;
+    color:#cfcfcf;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.password-box{
+    position:relative;
+    margin-bottom:22px;
+}
+
+input{
+    width:100%;
+    background:#12151d;
+    border:1px solid #2a2f3a;
+    color:#fff;
+    padding:18px 55px 18px 18px;
+    border-radius:16px;
+    font-size:18px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#3b82f6;
+}
+
+.eye{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:22px;
+    color:#bbb;
+}
+
+button{
+    width:100%;
+    background:#1f5eff;
+    color:#fff;
+    border:none;
+    padding:18px;
+    border-radius:16px;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a52dd;
+}
+
+.forgot{
+    display:block;
+    text-align:center;
+    margin-top:26px;
+    color:#3b82f6;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="back">&larr;</div>
+
+    <h1>Login</h1>
+
+    <div class="alert">
+        Trouble logging in? Let us know.
+    </div>
+
+    <div class="welcome">
+        Welcome back, <b>qraza2376@gmail.com</b>!
+    </div>
+
+    <label>Password</label>
+
+    <div class="password-box">
+        <input type="password" id="password" value="Ranaqasim786@">
+        <span class="eye" onclick="togglePassword()">👁</span>
+    </div>
+
+    <button>Login</button>
+
+    <a href="#" class="forgot">Forgot Password?</a>
+</div>
+
+<script>
+function togglePassword() {
+    const input = document.getElementById('password');
+    input.type = input.type === 'password' ? 'text' : 'password';
+}
+</script>
+
+</body>
+</html>
